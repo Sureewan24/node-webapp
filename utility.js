@@ -2,7 +2,7 @@
 
 const request = require("request-promise");
 const EXTERNAL_API="https://tools.ecpe.nu.ac.th/network/api/student/"; // put url
-const accessToken ="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29scy5lY3BlLm51LmFjLnRoXC9uZXR3b3JrXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjU5MDgwOTg4LCJleHAiOjE2NTkwODQ1ODgsIm5iZiI6MTY1OTA4MDk4OCwianRpIjoialU2VkV1MnNJTERjM2VpdyIsInN1YiI6MjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ZLr3CsBhdLKKvxg46CX4oCnYHHU0TFatCMorbkooxhk"; // put access token
+const accessToken ="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29scy5lY3BlLm51LmFjLnRoXC9uZXR3b3JrXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjYwNjQ0NTk3LCJleHAiOjE2NjA2NDgxOTcsIm5iZiI6MTY2MDY0NDU5NywianRpIjoiWlhEbzZRaURRZ0ZjZkZiWCIsInN1YiI6MjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3xVfVGFTyW8Mr4bcXPWp60NZx9FrU5KI9QQVSE8W-b8"; // put access token
 const student = {
   student_id: 63367148,
   name: 'Sureewan', // replace with your full name.
