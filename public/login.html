@@ -1,0 +1,57 @@
+<!--login.html-->
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="/jquery-ui/themes/base/jquery-ui.css">
+
+    <!--Javascript-->
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/jquery-ui/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <u><h2 class="title">ยินดีต้อนรับ </h2></u>
+    </div>
+    <div class="Connet">
+        <label >Username:</label>
+        <input class="wang" type="text" id="txtEmail" placeholder="Email"/>
+    </div>
+    <div class="Connet2">
+        <label >Password :</label>
+        <input class="wang" type="password" id="txtPassword" placeholder="รหัสผ่าน" />
+    </div>
+    <div class="bar">
+        <img src="photo/bat1.jpg">
+    </div>
+    <div class="pum">
+        <input type="button" value="Submit" id="btnSubmit">
+    </div>
+    <script type="text/javascript">
+        //btnSubmit
+        $('#btnSubmit').click( function(){
+          $.ajax({
+            method: "POST",
+            url: "https://tools.ecpe.nu.ac.th/network/api/login",
+            dataType : 'json',
+            headers: { 
+              'Content-Type': 'application/json',
+              "Accepts": "application/json",
+            },
+            data:JSON.stringify( {"email": $('#txtEmail').val(), "password": $('#txtPassword').val() } ),
+            success: function(data){
+              console.log(data);
+            }
+          });
+
+        });
+
+   </script>
+</body>
+</html>
